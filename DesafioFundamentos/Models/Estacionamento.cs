@@ -1,3 +1,5 @@
+using System.Diagnostics.Contracts;
+
 namespace DesafioFundamentos.Models
 {
     public class Estacionamento
@@ -46,6 +48,7 @@ namespace DesafioFundamentos.Models
 
                 // TODO: Remover a placa digitada da lista de veículos
                 // *IMPLEMENTE AQUI*
+                veiculos.Remove(placa);
 
                 Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal}");
             }
@@ -63,6 +66,9 @@ namespace DesafioFundamentos.Models
                 Console.WriteLine("Os veículos estacionados são:");
                 // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
                 // *IMPLEMENTE AQUI*
+                for(int contador = 0; contador < veiculos.Count; contador++){
+                    Console.WriteLine(veiculos[contador]);
+                }
             }
             else
             {
